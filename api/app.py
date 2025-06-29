@@ -22,8 +22,9 @@ def geladeiras_por_preco(min_preco: float, max_preco: float):
     """Busca as geladeiras dentro do intervalo de preços"""
     
     geladeiras = intervalo_preco(min_preco, max_preco)
+    produtos = dict(produtos = geladeiras)
     if geladeiras:
-        return geladeiras
+        return produtos
     return {"error": "Geladeiras não encontrada"}
 
 
@@ -33,7 +34,8 @@ def geladeiras_por_nota(min_nota: float, max_nota: float):
     """Busca as geladeiras dentro do intervalo de notas"""
     
     geladeiras = intervalo_nota(min_nota, max_nota)
+    produtos = dict(produtos = geladeiras)
     if geladeiras:
-        return geladeiras
+        return produtos
     return {"error": "Geladeiras não encontrada"}
 
